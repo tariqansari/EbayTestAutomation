@@ -1,16 +1,24 @@
 package com.test;
+import java.io.File;
 import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
+
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+
+import uimap.EbayPage;
 public class LoginEbay {
 	
 	
 	static AndroidDriver  driver;
-		public static void main(String args[]) 
+		public static void main(String args[]) throws Exception 
 		{
+			EbayPage page = new EbayPage();
 		   // AndroidDriver  driver;	
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			
@@ -22,9 +30,9 @@ public class LoginEbay {
 	   	    capabilities.setCapability("appPackage", "com.ebay.mobile");
 	   	    capabilities.setCapability("appActivity", "com.ebay.mobile.activities.MainActivity");
 		
-			//File file = new File(" C:\s\Users\\QEACOE\\EBayDemo\\EBay\\apk");
+			File file = new File("C:\\Users\\QEACOE\\EBayDemo\\EBay\\apk\\com.ebay.mobile_v5.17.0.18-117_Android-5.0.apk");
 			
-			//capabilities.setCapability("app", file.getAbsolutePath());
+			capabilities.setCapability("app", file.getAbsolutePath());
 			
 			 try
 	 	    {
@@ -34,64 +42,93 @@ public class LoginEbay {
 	 	    catch (Exception ex)
 	 	    {
 	 	        ex.printStackTrace();
-	 	    }	
-			
+	 	    }
+			 
+			 // Sign in 1st page
+				System.out.println("Enter 1");
+				Thread.sleep(10000);
+				
+				
+				driver.findElement(EbayPage.signInBtn).click();
+				
+			// Enter username and pasword and click the sign in
+				driver.findElement(EbayPage.username).sendKeys("tariq19ansari@gmail.com");;
+				System.out.println("Enter username");
+				
+				
+				driver.findElement(EbayPage.password).sendKeys("Qwerty123");;
+				System.out.println("Enter password");
+				
+				driver.findElement(EbayPage.signInBtn).click();
+				System.out.println("clcik sign in button");
+				
+			// No thanks .. page Handle 
+				Thread.sleep(10000);
+				driver.findElement(EbayPage.noThanks).click();
+				System.out.println("handle No thanks button");
+				
+				
+				// Click on Search box
+				Thread.sleep(10000);
+				 driver.findElement(EbayPage.selectSearch).click();
+				  
+				// enter Julius Caesar
+				 driver.findElement(EbayPage.productName).sendKeys("Julius Caesar");
+				 
+				//element.sendKeys("Julius Caesar");
+				System.out.println("Search for Julius Caesar");
+				
+				Thread.sleep(5000);
+				
+				/// Click on the dropdown option for the entered product
+				 driver.findElement(EbayPage.searchProd).click();
 
-	}
-		public void homePageLandingScreen() throws Exception {
-			System.out.println("Enter 1");
-			Thread.sleep(10000);
-			driver.findElement(By.id("com.ebay.mobile:id/button_sign_in"));
-			
-			//driver.findElementById("com.ebay.mobile:id/button_sign_in");
-			//com.ebay.mobile:id/button_sign_in
-			//driver.findElementById("com.ebay.mobile:id/sign_in_title");
-			System.out.println("Enter 11");
-			
+				System.out.println("list of books for juilius caesar");
+				
+				Thread.sleep(5000);
+		
+				/// scroll to select the item
+				
+		/// Select the first product from the list
+				driver.findElement(EbayPage.selectProdList).click();
+				System.out.println("without swipe selection done");
+				Thread.sleep(5000);
+				
+				/// click on image to enlarge
+				
+			//	driver.findElementByXPath("android.widget.ImageView[@content-desc=\'Item image 1 of 1\']").click();
+				// OR  driver.findElement(By.id("com.ebay.mobile:id/imageview_image")).click();
+			//	Thread.sleep(3000);
+				
+				//////////// Click on Buy the product
+				
+			//	Thread.sleep(5000);
+			//	 driver.findElementById("com.ebay.mobile:id/text").click();
+				 
+				 
+				 //////////// Click on Buy the product
+					
+					//Thread.sleep(10000);
+					// driver.findElementById("com.ebay.mobile:id/text").click();
+					 
+					 
+					 /////////// Perform Scroll functioanlity to button "Proceed to Pay"
+					 
+					 
+					 
+					 /////// click on "procedd to Pay"
+					 //Thread.sleep(10000);
+				 
+				 //
+				 
+		
+		
 		}
 		
-		public void signInScreen() {
-			
-			driver.findElementById("com.ebay.mobile:id/edit_text_username");
-			System.out.println("Enter 2");
-			
-			
-			driver.findElementById("com.ebay.mobile:id/edit_text_password");
-			System.out.println("Enter 3");
-			
-			driver.findElementById("com.ebay.mobile:id/button_sign_in");
-			System.out.println("Enter 4");
-		}
-
-		public void searchProduct() {
-			
-			
-			
-		}
 		
-		public void buyProduct() {
-			
-			
-		}
 
 		
 }
-
-
-
-/*sign in title
-resourceid : com.ebay.mobile:id/sign_in_title 
-text : Sign in 
-
-username
-resourceid : com.ebay.mobile:id/edit_text_username 
-
-password
-resourceid : com.ebay.mobile:id/edit_text_password
-
-signin button
-resourceid : com.ebay.mobile:id/button_sign_in 
-*/
 
 
 

@@ -4,9 +4,12 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
+
+import com.driver.Drivers;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -14,13 +17,12 @@ import io.appium.java_client.android.AndroidDriver;
 import uimap.EbayPage;
 public class LoginEbay {
 	
-	
-	static AndroidDriver  driver;
 		public static void main(String args[]) throws Exception 
 		{
 			EbayPage page = new EbayPage();
+			WebDriver driver = Drivers.getInstance();
 		   // AndroidDriver  driver;	
-			DesiredCapabilities capabilities = new DesiredCapabilities();
+			/*DesiredCapabilities capabilities = new DesiredCapabilities();
 			
 			capabilities.setCapability("deviceName", "32085ddc0f5e7177");
 			capabilities.setCapability("platformName", "Android");
@@ -28,13 +30,13 @@ public class LoginEbay {
 			
 			
 	   	    capabilities.setCapability("appPackage", "com.ebay.mobile");
-	   	    capabilities.setCapability("appActivity", "com.ebay.mobile.activities.MainActivity");
+	   	    capabilities.setCapability("appActivity", "com.ebay.mobile.activities.MainActivity");*/
 		
-			File file = new File("C:\\Users\\QEACOE\\EBayDemo\\EBay\\apk\\com.ebay.mobile_v5.17.0.18-117_Android-5.0.apk");
+			//File file = new File("C:\\Users\\QEACOE\\EBayDemo\\EBay\\apk\\com.ebay.mobile_v5.17.0.18-117_Android-5.0.apk");
 			
-			capabilities.setCapability("app", file.getAbsolutePath());
+			//capabilities.setCapability("app", file.getAbsolutePath());
 			
-			 try
+			/* try
 	 	    {
 	 	        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	 	        System.out.println("Started");
@@ -42,7 +44,7 @@ public class LoginEbay {
 	 	    catch (Exception ex)
 	 	    {
 	 	        ex.printStackTrace();
-	 	    }
+	 	    }*/
 			 
 			 // Sign in 1st page
 				System.out.println("Enter 1");

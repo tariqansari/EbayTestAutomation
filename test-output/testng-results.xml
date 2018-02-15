@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="example suite 1" duration-ms="6" started-at="2018-02-14T09:57:15Z" finished-at="2018-02-14T09:57:15Z">
+  <suite name="Default suite" duration-ms="125749" started-at="2018-02-15T05:46:10Z" finished-at="2018-02-15T05:48:16Z">
     <groups>
     </groups>
-    <test name="Regression suite 1" duration-ms="6" started-at="2018-02-14T09:57:15Z" finished-at="2018-02-14T09:57:15Z">
-    </test> <!-- Regression suite 1 -->
-  </suite> <!-- example suite 1 -->
+    <test name="Default test" duration-ms="125749" started-at="2018-02-15T05:46:10Z" finished-at="2018-02-15T05:48:16Z">
+      <class name="com.test.EbayTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.test.EbayTest@1563da5]" name="setup" is-config="true" duration-ms="57978" started-at="2018-02-15T11:16:10Z" finished-at="2018-02-15T11:17:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.test.EbayTest@1563da5]" name="login" duration-ms="5372" started-at="2018-02-15T11:17:08Z" finished-at="2018-02-15T11:17:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="loginScreenPage()[pri:2, instance:com.test.EbayTest@1563da5]" name="loginScreenPage" duration-ms="16323" started-at="2018-02-15T11:17:13Z" finished-at="2018-02-15T11:17:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginScreenPage -->
+        <test-method status="PASS" signature="noThanksPage()[pri:3, instance:com.test.EbayTest@1563da5]" name="noThanksPage" duration-ms="5233" started-at="2018-02-15T11:17:30Z" finished-at="2018-02-15T11:17:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noThanksPage -->
+        <test-method status="PASS" signature="searchProduct()[pri:4, instance:com.test.EbayTest@1563da5]" name="searchProduct" duration-ms="15345" started-at="2018-02-15T11:17:35Z" finished-at="2018-02-15T11:17:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="buyItNow()[pri:5, instance:com.test.EbayTest@1563da5]" name="buyItNow" duration-ms="25316" started-at="2018-02-15T11:17:50Z" finished-at="2018-02-15T11:18:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyItNow -->
+        <test-method status="PASS" signature="swipeVertical()[pri:6, instance:com.test.EbayTest@1563da5]" name="swipeVertical" duration-ms="106" started-at="2018-02-15T11:18:16Z" finished-at="2018-02-15T11:18:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipeVertical -->
+      </class> <!-- com.test.EbayTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

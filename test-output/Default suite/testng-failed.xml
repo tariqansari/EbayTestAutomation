@@ -6,6 +6,12 @@
       <class name="com.test.EbayTest">
         <methods>
           <include name="buyItNow"/>
+          <include name="noThanksPage"/>
+          <include name="searchProduct"/>
+          <include name="loginScreenPage"/>
+          <include name="signout"/>
+          <include name="paymentMethod"/>
+          <include name="proceedToPay"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.test.EbayTest -->

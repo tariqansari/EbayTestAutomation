@@ -4,6 +4,8 @@
   <test name="Regression suite 1" >
     <classes>
       <class name="com.test.EbayTest"/>
+      <class name="com.test.SearchAndPayment"/>
+      <class name="com.test.Signout"/>
     </classes>
  </test>
 </suite>

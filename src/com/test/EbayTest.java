@@ -8,14 +8,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.openqa.selenium.Dimension;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import com.support.*;
-
+import com.support.ExcelUtils;
+import com.support.readPropertyFile;
 import com.driver.Drivers;
 
 import uimap.EbayPage;
@@ -23,35 +28,32 @@ import uimap.EbayPage;
 public class EbayTest {
 	
 	Dimension size;
-	WebDriver driver;
+	AppiumDriver driver;
 	//AndroidDriver driver;
+	EbayPage page;
+	readPropertyFile readP = new readPropertyFile(".\\TestProperty.properties");
+	
 	@BeforeTest
-	public void setup() throws MalformedURLException
+	public void setup() throws Exception
 	{
-		EbayPage page = new EbayPage();
+	    page = new EbayPage();
 		driver = Drivers.getInstance();
+		
 	}
 
-	@Test											// Test when user launch the Ebay application
-	public void login()
-	{
-		 // Sign in 1st page
+
+	@Test(priority=1,dataProvider="Authentication")								// Test to enter user crendentials and hit login
+	public void loginScreenPage(String username, String password) {
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(EbayPage.signInBtn).click();
 		System.out.println("without swipe selection done");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
-		
-	}
-	@Test(priority=2)								// Test to enter user crendentials and hit login
-	public void loginScreenPage() {
-		
-		// Enter username and pasword and click the sign in
-		driver.findElement(EbayPage.username).sendKeys("tariq19ansari@gmail.com");
+		driver.findElement(EbayPage.username).sendKeys(username);
 		System.out.println("Enter username");
-		
-		
-		driver.findElement(EbayPage.password).sendKeys("Qwerty123");;
+	
+		driver.findElement(EbayPage.password).sendKeys(password);
 		System.out.println("Enter password");
 		
 		driver.findElement(EbayPage.signInBtn).click();
@@ -59,7 +61,7 @@ public class EbayTest {
 		
 	}
 	
-	@Test(priority=3)								//Test to click No Thanks landing page
+	@Test(priority=2)								//Test to click No Thanks landing page
 	public void noThanksPage() throws Exception {
 		
 		// No thanks .. page Handle
@@ -69,7 +71,17 @@ public class EbayTest {
 		
 	}
 	
-	@Test(priority=4)								// Test to search the user product
+	@DataProvider(name="Authentication")
+
+	public Object[][] Authentication() throws Exception{
+
+	 Object[][] testObjArray = ExcelUtils.getTableArray(readP.getData("ExcelPath"),"TestDataSheet");
+
+	 return (testObjArray);
+
+	}
+	
+/*	@Test(priority=4)								// Test to search the user product
 	public void searchProduct() throws Exception {
 		
 		// Click on Search box
@@ -106,39 +118,36 @@ public class EbayTest {
 		
 		
 		//Proceed to Pay
-		driver.swipe(toText("Proceed to Pay"));
+		//driver.swipe(toText("Proceed to Pay"));
+		//driver.scrollTo("Procees to Pay");
 		
 				size = driver.manage().window().getSize();
 				  System.out.println(size);
 				   
 				  //Find swipe start and end point from screen's with and height.
 				  //Find starty point which is at bottom side of screen.
-				  int starty = (int) (size.height * 0.80);
+				  int starty = (int) (size.height * 0.20);
 				  System.out.println(starty);
 				  //Find endy point which is at top side of screen.
-				  int endy = (int) (size.height * 0.20);
+				  int endy = (int) (size.height * 0.80);
 				  System.out.println(endy);
 				  //Find horizontal point where you wants to swipe. It is in middle of screen width.
 				  int startx = size.width / 2;
 				  System.out.println("starty = " + starty + " ,endy = " + endy + " , startx = " + startx);
-
-				
-				  //Swipe from Bottom to Top.
-				//Object visible =(Object) driver.swipe(startx, starty, startx, endy, 3000);
-				
-			//	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-				  //Swipe from Top to Bottom.
-				//driver.swipe(startx, endy, startx, starty, 3000);
-				 // Thread.sleep(2000);
+				  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				    TouchAction ta = new TouchAction(driver);
+				    ta.press(startx, starty).waitAction().moveTo(startx, endy).release().perform();
+				    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
 		
 	}
-/*	@Test(priority=7)							// Test to click on Proceed to pay button
+	@Test(priority=7)							// Test to click on Proceed to pay button
 public void proceedToPay() {  
 		  driver.findElement(EbayPage.proceedToPayBtn).click();
 		  
 	}
 	
-	//@Test(priority=8)							// Test to perform Payment gateway Method
+	@Test(priority=8)							// Test to perform Payment gateway Method
 	public void paymentMethod() throws Exception {
 		//Select Wallets card radio button and then
 		
@@ -160,9 +169,12 @@ public void proceedToPay() {
 		driver.findElement(EbayPage.lhn).click();
 		driver.findElement(EbayPage.clickUser).click();
 		driver.findElement(EbayPage.signOut).click();
+		driver.findElement(EbayPage.OkBtn).click();
 	}
 	@Test(priority=10)
 	public void swipeHorizontal() {
+		
+	
 		
 		//Get the size of screen.
 		size = driver.manage().window().getSize();
@@ -178,11 +190,14 @@ public void proceedToPay() {
 		System.out.println("startx = " + startx + " ,endx = " + endx + " , starty = " + starty);
 
 		//Swipe from Right to Left.
-		driver.swipe(startx, starty, endx, starty, 3000);
-		Thread.sleep(2000);
-	}
+		 TouchAction ta = new TouchAction(driver);
+		    ta.press(startx, starty).waitAction().moveTo(endx, starty).release().perform();
+		    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}*/
+	
+	
 
-*/
+
 }
 
 

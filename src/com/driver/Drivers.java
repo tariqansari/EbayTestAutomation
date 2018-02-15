@@ -2,14 +2,19 @@ package com.driver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.support.readPropertyFile;
+
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Drivers {
-
-	 static WebDriver  driver;	
+// driver initialize
+	 public static AppiumDriver  driver;	
 	// static AndroidDriver driver;
 	 
 	 private Drivers()
@@ -17,22 +22,24 @@ public class Drivers {
 	
 	@SuppressWarnings("rawtypes")
 	
-	public static WebDriver getInstance() throws MalformedURLException
+	public static AppiumDriver getInstance() throws Exception
 	{
+		readPropertyFile readP = new readPropertyFile(".\\TestProperty.properties");
 		
 		if(driver==null)
 		{
 		
 			DesiredCapabilities capabilities = new DesiredCapabilities();
 			
-			capabilities.setCapability("deviceName", "32085ddc0f5e7177");
-			capabilities.setCapability("platformName", "Android");
-			capabilities.setCapability("platformVersion", "6.0.1");
+			capabilities.setCapability("deviceName", readP.getData("DeviceID"));
+			capabilities.setCapability("platformName", readP.getData("DevicePlatform"));
+			capabilities.setCapability("platformVersion", readP.getData("PlatformVersion"));
 			
 			
-		    capabilities.setCapability("appPackage", "com.ebay.mobile");
-		    capabilities.setCapability("appActivity", "com.ebay.mobile.activities.MainActivity");
-		    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		    capabilities.setCapability("appPackage", readP.getData("AppPackage"));
+		    capabilities.setCapability("appActivity", readP.getData("ActivityName"));
+		    driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 		return driver;
 	}

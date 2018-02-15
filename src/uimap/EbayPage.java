@@ -57,6 +57,6 @@ public class EbayPage {
 	
 	// signOut
 	public static final By signOut = By.id("com.ebay.mobile:id/menuitem_sign_out");
-	
+	public static final By OkBtn = By.id("android:id/button1");
 	
 }

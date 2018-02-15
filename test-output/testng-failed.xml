@@ -3,6 +3,14 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [example suite 1]">
   <test name="Regression suite 1(failed)">
     <classes>
+      <class name="com.test.SearchAndPayment">
+        <methods>
+          <include name="swipeVertical"/>
+          <include name="paymentMethod"/>
+          <include name="proceedToPay"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.test.SearchAndPayment -->
       <class name="com.test.Signout">
         <methods>
           <include name="setup"/>

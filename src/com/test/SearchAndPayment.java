@@ -1,7 +1,5 @@
 package com.test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -13,10 +11,10 @@ import org.openqa.selenium.Dimension;
 
 public class SearchAndPayment {
 
-	Dimension size;
 	@SuppressWarnings("rawtypes")
 	AppiumDriver driver;
 	EbayPage page;
+	Dimension size;
 
 	@BeforeTest
 	public void setup() throws Exception {
@@ -26,13 +24,11 @@ public class SearchAndPayment {
 
 	@Test(priority = 3) // Test to search the user product
 	public void searchProduct() throws Exception {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(EbayPage.selectSearch).click();
 		driver.findElement(EbayPage.productName).sendKeys("Julius Caesar");
 		driver.findElement(EbayPage.searchProd).click();
-		driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 		driver.findElement(EbayPage.selectProdList).click();
-		Assert.assertEquals(true, driver.findElement(EbayPage.buyItNowBtn).isEnabled());
+		Assert.assertEquals(true, driver.findElement(EbayPage.buyItNowBtn).isDisplayed());
 	}
 
 	@Test(priority = 4) // Test to buy the Product
@@ -69,7 +65,6 @@ public class SearchAndPayment {
 		driver.findElement(EbayPage.paymentMethod).click();
 		driver.findElement(EbayPage.selectPayTM).click();
 		driver.findElement(EbayPage.payNowBtn).click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(EbayPage.closeBtn).click();
 
 	}

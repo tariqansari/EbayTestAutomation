@@ -4,12 +4,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-public class readPropertyFile {
 
+public class ReadPropertyFile {
+     /*
+      * Initialize property class
+      */
 	Properties properties;
 
-	public readPropertyFile(String FilePath)
-	{
+	public ReadPropertyFile(String FilePath) {
 		try {
 			FileInputStream Locator = new FileInputStream(FilePath);
 			properties = new Properties();
@@ -20,7 +22,7 @@ public class readPropertyFile {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String getData(String ElementName) throws Exception {
 		// Read value using the logical name as Key
 		String data = properties.getProperty(ElementName);

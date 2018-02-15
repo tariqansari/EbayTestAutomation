@@ -8,159 +8,19 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">example suite 1</th></tr>
-<tr><td><a href="#t0">Regression suite 1</a></td><td class="num">4</td><td class="num">0</td><td class="num attn">5</td><td class="num">144,502</td><td></td><td></td></tr>
+<tr><th colspan="7">Ebay suite</th></tr>
+<tr><td><a href="#t0">Regression suite</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">101,780</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">example suite 1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression suite 1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.test.EbayTest</td><td><a href="#m0">loginScreenPage</a></td><td rowspan="1">1518691611296</td><td rowspan="1">31372</td></tr><tr class="failedodd"><td rowspan="3">com.test.SearchAndPayment</td><td><a href="#m1">paymentMethod</a></td><td rowspan="1">1518691669661</td><td rowspan="1">7543</td></tr><tr class="failedodd"><td><a href="#m2">proceedToPay</a></td><td rowspan="1">1518691662243</td><td rowspan="1">7414</td></tr><tr class="failedodd"><td><a href="#m3">swipeVertical</a></td><td rowspan="1">1518691662044</td><td rowspan="1">192</td></tr><tr class="failedeven"><td rowspan="1">com.test.Signout</td><td><a href="#m4">signout</a></td><td rowspan="1">1518691677206</td><td rowspan="1">7439</td></tr><tr><th colspan="4">Regression suite 1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.test.EbayTest</td><td><a href="#m5">noThanksPage</a></td><td rowspan="1">1518691642683</td><td rowspan="1">274</td></tr><tr class="passedeven"><td><a href="#m6">performOrientation</a></td><td rowspan="1">1518691589267</td><td rowspan="1">21320</td></tr><tr class="passedodd"><td rowspan="2">com.test.SearchAndPayment</td><td><a href="#m7">buyItNow</a></td><td rowspan="1">1518691661733</td><td rowspan="1">309</td></tr><tr class="passedodd"><td><a href="#m8">searchProduct</a></td><td rowspan="1">1518691642959</td><td rowspan="1">18771</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ebay suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression suite &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.test.LoginEbayApp</td><td><a href="#m0">loginScreenPage</a></td><td rowspan="1">1518696636139</td><td rowspan="1">26601</td></tr><tr class="passedeven"><td><a href="#m1">noThanksPage</a></td><td rowspan="1">1518696662742</td><td rowspan="1">196</td></tr><tr class="passedeven"><td><a href="#m2">performOrientation</a></td><td rowspan="1">1518696633826</td><td rowspan="1">1667</td></tr><tr class="passedodd"><td rowspan="5">com.test.SearchAndPayment</td><td><a href="#m3">buyItNow</a></td><td rowspan="1">1518696683749</td><td rowspan="1">834</td></tr><tr class="passedodd"><td><a href="#m4">paymentMethod</a></td><td rowspan="1">1518696684606</td><td rowspan="1">688</td></tr><tr class="passedodd"><td><a href="#m5">proceedToPay</a></td><td rowspan="1">1518696684603</td><td rowspan="1">1</td></tr><tr class="passedodd"><td><a href="#m6">searchProduct</a></td><td rowspan="1">1518696662940</td><td rowspan="1">20806</td></tr><tr class="passedodd"><td><a href="#m7">swipeVertical</a></td><td rowspan="1">1518696684585</td><td rowspan="1">16</td></tr><tr class="passedeven"><td rowspan="1">com.test.Signout</td><td><a href="#m8">signout</a></td><td rowspan="1">1518696685296</td><td rowspan="1">4525</td></tr></tbody>
 </table>
-<h2>Regression suite 1</h2><h3 id="m0">com.test.EbayTest#loginScreenPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>tariq19ansari@gmail.com</td><td>Qwerty123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
-System info: host: &apos;LT049465&apos;, ip: &apos;169.254.6.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, databaseEnabled: false, desired: {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, deviceName: 32085ddc0f5e7177, platformName: android, platformVersion: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G900H, deviceName: 32085ddc0f5e7177, deviceScreenSize: 1080x1920, deviceUDID: 32085ddc0f5e7177, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 97bed90d-a1ee-4bbf-bad8-2cc386ab0ce5
-*** Element info: {Using=id, value=com.ebay.mobile:id/button_sign_in}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at com.test.EbayTest.loginScreenPage(EbayTest.java:61)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.test.SearchAndPayment#paymentMethod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
-System info: host: &apos;LT049465&apos;, ip: &apos;169.254.6.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, databaseEnabled: false, desired: {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, deviceName: 32085ddc0f5e7177, platformName: android, platformVersion: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G900H, deviceName: 32085ddc0f5e7177, deviceScreenSize: 1080x1920, deviceUDID: 32085ddc0f5e7177, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 97bed90d-a1ee-4bbf-bad8-2cc386ab0ce5
-*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[3]/android.view.View[3]/android.view.View[2]/android.widget.ListView/android.view.View[7]/android.view.View}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at com.test.SearchAndPayment.paymentMethod(SearchAndPayment.java:71)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.test.SearchAndPayment#proceedToPay</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
-System info: host: &apos;LT049465&apos;, ip: &apos;169.254.6.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, databaseEnabled: false, desired: {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, deviceName: 32085ddc0f5e7177, platformName: android, platformVersion: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G900H, deviceName: 32085ddc0f5e7177, deviceScreenSize: 1080x1920, deviceUDID: 32085ddc0f5e7177, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 97bed90d-a1ee-4bbf-bad8-2cc386ab0ce5
-*** Element info: {Using=id, value=proceedToPay}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at com.test.SearchAndPayment.proceedToPay(SearchAndPayment.java:64)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.test.SearchAndPayment#swipeVertical</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
-System info: host: &apos;LT049465&apos;, ip: &apos;169.254.6.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, databaseEnabled: false, desired: {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, deviceName: 32085ddc0f5e7177, platformName: android, platformVersion: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G900H, deviceName: 32085ddc0f5e7177, deviceScreenSize: 1080x1920, deviceUDID: 32085ddc0f5e7177, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 97bed90d-a1ee-4bbf-bad8-2cc386ab0ce5
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.PerformsTouchActions.performTouchAction(PerformsTouchActions.java:41)
-	at io.appium.java_client.TouchAction.perform(TouchAction.java:416)
-	at com.test.SearchAndPayment.swipeVertical(SearchAndPayment.java:55)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.test.Signout#signout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:28.403Z&apos;
-System info: host: &apos;LT049465&apos;, ip: &apos;169.254.6.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, databaseEnabled: false, desired: {appActivity: com.ebay.mobile.activities...., appPackage: com.ebay.mobile, deviceName: 32085ddc0f5e7177, platformName: android, platformVersion: 6.0.1}, deviceManufacturer: samsung, deviceModel: SM-G900H, deviceName: 32085ddc0f5e7177, deviceScreenSize: 1080x1920, deviceUDID: 32085ddc0f5e7177, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 6.0.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: 97bed90d-a1ee-4bbf-bad8-2cc386ab0ce5
-*** Element info: {Using=id, value=com.ebay.mobile:id/textview_sign_in_status}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at com.test.Signout.signout(Signout.java:24)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.test.EbayTest#noThanksPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.test.EbayTest#performOrientation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.test.SearchAndPayment#buyItNow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.test.SearchAndPayment#searchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression suite</h2><h3 id="m0">com.test.LoginEbayApp#loginScreenPage</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>tariq19ansari@gmail.com</td><td>Qwerty123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.test.LoginEbayApp#noThanksPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.test.LoginEbayApp#performOrientation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.test.SearchAndPayment#buyItNow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.test.SearchAndPayment#paymentMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.test.SearchAndPayment#proceedToPay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.test.SearchAndPayment#searchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.test.SearchAndPayment#swipeVertical</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.test.Signout#signout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

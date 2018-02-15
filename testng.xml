@@ -3,7 +3,7 @@
 <suite name="Ebay suite" verbose="1" >
   <test name="Regression suite" >
     <classes>
-      <class name="com.test.EbayTest"/>
+      <class name="com.test.LoginEbayApp"/>
       <class name="com.test.SearchAndPayment"/>
       <class name="com.test.Signout"/>
     </classes>

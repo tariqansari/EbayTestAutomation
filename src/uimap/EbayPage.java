@@ -6,7 +6,6 @@ public class EbayPage {
 
 	// LoginIn Screen
 	public static final By username = By.id("com.ebay.mobile:id/edit_text_username");
-
 	public static final By password = By.id("com.ebay.mobile:id/edit_text_password");
 	public static final By signInBtn = By.id("com.ebay.mobile:id/button_sign_in");
 
